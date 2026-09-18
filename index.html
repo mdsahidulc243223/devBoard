@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DevBoard</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#f4f6fc] text-gray-800 min-h-screen">
+
+    <!-- Header -->
+    <header class="max-w-7xl mx-auto px-4 py-5">
+        <div class="bg-white rounded-xl px-6 py-4 flex items-center justify-between">
+
+            <!-- Logo -->
+            <div class="flex items-center gap-2">
+                <div class="w-9 h-9 bg-[#4b24c8] rounded-full flex items-center justify-center text-white font-bold">
+                    D
+                </div>
+
+                <h1 class="text-xl font-semibold">
+                    Dev<span class="font-bold">Board</span>
+                </h1>
+            </div>
+
+            <!-- Right Side -->
+            <div class="flex items-center gap-5">
+
+                <!-- Task Counter -->
+                <div class="flex items-center gap-2 bg-[#f4f6fc] px-4 py-2 rounded-full">
+                    <div class="w-6 h-6 rounded-full bg-white flex items-center justify-center">
+                        ✓
+                    </div>
+
+                    <span class="font-bold task-count">
+                        6
+                    </span>
+                </div>
+
+                <!-- Color Button -->
+                <button
+                    id="theme-btn"
+                    class="w-9 h-9 rounded-full bg-[#f4f6fc] flex items-center justify-center hover:scale-110 transition">
+                    🎨
+                </button>
+
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Main -->
+    <main class="max-w-7xl mx-auto px-4 pb-10">
+
+        <!-- Top Cards -->
+        <div class="grid grid-cols-3 gap-4 mb-5">
+
+            <!-- Task Assigned -->
+            <div class="min-h-[96px] bg-[#f5f7ff] rounded-xl p-5 flex items-center gap-3">
+
+                <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center">
+                    ✓
+                </div>
+
+                <div>
+                    <p class="text-[11px] text-gray-500">
+                        Task Assigned
+                    </p>
+
+                    <p class="text-[13px] font-bold mt-1 task-count">
+                        6
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- Discover Something -->
+            <div class="min-h-[96px] bg-[#4b24c8] rounded-xl p-5 flex items-center gap-3 text-white">
+
+                <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
+                    ✨
+                </div>
+
+                <div>
+                    <p class="text-[11px]">
+                        Discover Something
+                    </p>
+
+                    <p class="text-[13px] font-bold mt-1">
+                        Explore new tasks
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- Current Date -->
+            <div class="min-h-[96px] bg-[#f5f7ff] rounded-xl p-5 flex items-center gap-3">
+
+                <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center">
+                    📅
+                </div>
+
+                <div>
+                    <p class="text-[11px] text-gray-500">
+                        Today
+                    </p>
+
+                    <p class="text-[13px] font-bold mt-1 date">
+                        Loading...
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Main Grid -->
+        <div class="grid grid-cols-[minmax(0,1fr)_255px] gap-4">
+
+            <!-- LEFT SIDE -->
+            <section>
+
+                <div class="grid grid-cols-3 gap-4">
+
+
+                    <!-- Task 1 -->
+                    <div class="task-card bg-[#f5f7ff] rounded-xl p-4 min-h-[170px] flex flex-col">
+
+                        <p class="company text-[11px] text-gray-500 mb-2">
+                            Shop Ease
+                        </p>
+
+                        <h3 class="task-title text-[13px] font-bold mb-3">
+                            Fix Mobile Button Issue
+                        </h3>
+
+                        <p class="text-[10px] text-gray-400 flex-1">
+                            Fix the mobile responsive button issue.
+                        </p>
+
+                        <button
+                            class="completed bg-[#4b24c8] hover:bg-[#3819a5] text-white text-[10px] font-bold px-3 py-2 rounded">
+                            Completed
+                        </button>
+
+                    </div>
+
+
+                    <!-- Task 2 -->
+                    <div class="task-card bg-[#f5f7ff] rounded-xl p-4 min-h-[170px] flex flex-col">
+
+                        <p class="company text-[11px] text-gray-500 mb-2">
+                            Soft Pay
+                        </p>
+
+                        <h3 class="task-title text-[13px] font-bold mb-3">
+                            Add Pay Success Modal
+                        </h3>
+
+                        <p class="text-[10px] text-gray-400 flex-1">
+                            Add a success modal after successful payment.
+                        </p>
+
+                        <button
+                            class="completed bg-[#4b24c8] hover:bg-[#3819a5] text-white text-[10px] font-bold px-3 py-2 rounded">
+                            Completed
+                        </button>
+
+                    </div>
+
+
+                    <!-- Task 3 -->
+                    <div class="task-card bg-[#f5f7ff] rounded-xl p-4 min-h-[170px] flex flex-col">
+
+                        <p class="company text-[11px] text-gray-500 mb-2">
+                            Meta
+                        </p>
+
+                        <h3 class="task-title text-[13px] font-bold mb-3">
+                            Add new reaction 😘
+                        </h3>
+
+                        <p class="text-[10px] text-gray-400 flex-1">
+                            Add a new reaction option to the platform.
+                        </p>
+
+                        <button
+                            class="completed bg-[#4b24c8] hover:bg-[#3819a5] text-white text-[10px] font-bold px-3 py-2 rounded">
+                            Completed
+                        </button>
+
+                    </div>
+
+
+                    <!-- Task 4 -->
+                    <div class="task-card bg-[#f5f7ff] rounded-xl p-4 min-h-[170px] flex flex-col">
+
+                        <p class="company text-[11px] text-gray-500 mb-2">
+                            Programming Hero
+                        </p>
+
+                        <h3 class="task-title text-[13px] font-bold mb-3">
+                            Fix Video Loading Issue
+                        </h3>
+
+                        <p class="text-[10px] text-gray-400 flex-1">
+                            Fix the video loading problem.
+                        </p>
+
+                        <button
+                            class="completed bg-[#4b24c8] hover:bg-[#3819a5] text-white text-[10px] font-bold px-3 py-2 rounded">
+                            Completed
+                        </button>
+
+                    </div>
+
+
+                    <!-- Task 5 -->
+                    <div class="task-card bg-[#f5f7ff] rounded-xl p-4 min-h-[170px] flex flex-col">
+
+                        <p class="company text-[11px] text-gray-500 mb-2">
+                            Google LLC
+                        </p>
+
+                        <h3 class="task-title text-[13px] font-bold mb-3">
+                            Integrate AI search
+                        </h3>
+
+                        <p class="text-[10px] text-gray-400 flex-1">
+                            Integrate AI powered search functionality.
+                        </p>
+
+                        <button
+                            class="completed bg-[#4b24c8] hover:bg-[#3819a5] text-white text-[10px] font-bold px-3 py-2 rounded">
+                            Completed
+                        </button>
+
+                    </div>
+
+
+                    <!-- Task 6 -->
+                    <div class="task-card bg-[#f5f7ff] rounded-xl p-4 min-h-[170px] flex flex-col">
+
+                        <p class="company text-[11px] text-gray-500 mb-2">
+                            Polygon Tech
+                        </p>
+
+                        <h3 class="task-title text-[13px] font-bold mb-3">
+                            Review Ami Probashi Site
+                        </h3>
+
+                        <p class="text-[10px] text-gray-400 flex-1">
+                            Review the website and report any issues.
+                        </p>
+
+                        <button
+                            class="completed bg-[#4b24c8] hover:bg-[#3819a5] text-white text-[10px] font-bold px-3 py-2 rounded">
+                            Completed
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- RIGHT SIDE : ACTIVITY LOG -->
+            <aside class="bg-white rounded-xl min-h-[525px] p-6">
+
+                <div class="flex items-center gap-2 mb-5">
+
+                    <span class="text-lg">
+                        🕘
+                    </span>
+
+                    <h2 class="font-bold text-sm">
+                        Activity Log
+                    </h2>
+
+                </div>
+
+
+                <!-- Activity List -->
+                <div class="activity-list space-y-3 min-h-[400px]">
+
+                    <!-- Activity will appear here -->
+
+                </div>
+
+
+                <!-- Clear History -->
+                <button
+                    class="clear-btn block mx-auto bg-[#4b24c8] hover:bg-[#3819a5] text-white text-[10px] font-bold px-3 py-2 rounded">
+                    Clear History
+                </button>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
